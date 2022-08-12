@@ -1,0 +1,237 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box
+}
+nav{
+    width: 367px;
+    height: 100vh;
+    background-color: grey;
+    float: left;
+} 
+main{
+    width: calc(100% - 367px);
+    height: 100vh;
+    background-color: blanchedalmond;
+    float: right;
+    position: relative;
+}
+.logo{
+    width: 150px;
+    height: 150px;
+    background-color: black;
+    margin: auto;
+    margin-top: 75px;
+}
+.links{
+    width: 150px;
+    margin: auto;
+    margin-top: 60px;
+}
+a{
+    display: block; /*讓連結自動換行*/
+    text-align: center;
+    margin: 5px;
+}
+.container{
+    width: 955px;
+    height: 570px;
+    background-color: black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.container > div{
+    width: 315px;
+    height: 570px;
+    background-color: gray;
+    float: left;
+    /* transition: 1s;  */
+    /* transition的漸變只能用在數值變化上 */
+
+    background-repeat: no-repeat;
+    background-size: cover; 
+}
+.x{
+    background-image: url('./img/精油.jpg');
+}
+.x:hover{
+    background-size: 250%;
+    background-position: 20% 70%;
+}
+.y{
+    margin:0px 5px;
+    background-image: url('./img/身體油.jpg');
+}
+.y:hover{
+    background-size: 250%;
+    background-position: 15% 70%;
+}
+.z{
+    background-image: url('./img/香氛機.jpg');
+}
+.z:hover{
+    background-size: 250%;
+    background-position: 45% 50%;
+}
+
+@media (max-width:1400px){
+   
+    .container{
+        width: 800px;
+        height: 570px;
+    }
+    .container .x{
+        width: 800px;
+        height: 280px;
+        margin-bottom: 10px;
+
+        float: unset;
+    }
+    .container .y{
+        width: 395px;
+        height: 280px;
+
+        margin: 0px;
+    }
+    .container .z{
+        width: 395px;
+        height: 280px;
+        float: right;
+    }
+}
+@media (max-width:1200px){
+
+    nav{
+        width: 100%;
+        height: 100px;
+        padding: 10px 35px;
+
+        float: unset;
+    }
+    .logo{
+        width: 80px;
+        height: 80px;
+        float: left;
+
+        margin: 0px;
+    }
+    .links{
+        height: 100%;
+        float: right;
+
+        margin: 0px;
+        width: unset;
+    }
+    a{
+        line-height: 80px;
+
+        display: unset;
+        text-align: unset;
+        margin: 0px;
+    }
+    main{
+        width: 100%;
+        padding: 50px 35px 75px;
+
+        height: unset;
+        float: unset;
+        position: unset;
+    }
+    .container{
+        width: 100%;
+        height: 800px;
+
+        position: unset;
+        transform: unset
+    }
+    .container .x{
+        width: 100%;
+        height: 395px;
+        margin-bottom: 10px;
+
+        background-repeat: unset;
+        background-size: unset;
+    }
+    .container .y{
+        width: calc(calc(100% - 10px) / 2);
+        height: 395px;
+        float: left;
+    }
+    .container .z{
+        width: calc(calc(100% - 10px) / 2);
+        height: 395px;
+        float: right;
+    }
+}
+@media (max-width:550px){
+     nav{
+        height: 80px;
+        padding: calc(calc(80px - 50px) / 2) 20px;
+        position: relative;
+    }
+    .logo{
+        width: 55px;
+        height: 55px;
+        align-items: center;
+    
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+
+        float: unset;
+    }
+    .links{
+        width: 40px;
+        height: 50px;
+        background-color: black;
+        float: left;
+    }
+    .links:hover{
+        width: 200px;
+        height: 250px;
+        background-color: red;
+        float: left;
+        padding: 10px;
+    }
+    .links:hover > a {
+        display: block; /*display的預設是inline*/
+        text-align: center;
+        color: white;
+        line-height: 24px;
+    }
+    a{
+        display: none;
+
+        line-height: unset;
+    }
+    main{
+        min-height: calc(100vh - 80px);
+        /* min-height 設定最小高度, 確保高度變大可以自動填滿的同時 變小又不會擠壓內容的空間 */
+
+        padding: unset;
+    }
+    .container{
+        height: unset;
+        background-color: unset;
+    }
+    .container .x{
+        height: calc(calc(667px - 80px) / 3);
+
+        margin: unset;
+    }
+    .container .y{
+        width: 100%;
+        height: calc(calc(667px - 80px) / 3);
+
+        float: unset;
+    }
+    .container .z{
+        width: 100%;
+        height: calc(calc(667px - 80px) / 3);
+
+        float: unset;
+    }
+}
